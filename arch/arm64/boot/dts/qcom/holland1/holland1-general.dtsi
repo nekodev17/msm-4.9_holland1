@@ -22,7 +22,7 @@
 			compatible = "focaltech,5435";
 			reg = <0x38>;
 			interrupt-parent = <&tlmm>;
-			interrupts = <65 0x2>;
+			interrupts = <65 0x2008>;
 			vdd-supply = <&pm8937_l10>;
 			vcc_i2c-supply = <&pm8937_l5>;
 			/* pins used by touchscreen */
