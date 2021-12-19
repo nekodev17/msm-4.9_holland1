@@ -57,11 +57,11 @@
 			reg = <0x0 0x84A00000 0x0 0x1E00000>;
 		};
 
-		pstore_reserve_mem: pstore_reserve_mem_region@0 {
-
-			compatible = "removed-dma-pool";
-			no-map;
-			reg = <0x0 0x9ff00000 0x0 0x00300000>;
+		ramoops@8f000000 {
+			compatible = "ramoops";
+			reg = <0 0x8f000000 0 0x100000>;
+			record-size = <0x4000>;
+			console-size = <0x4000>;
 		};
 	};
 
