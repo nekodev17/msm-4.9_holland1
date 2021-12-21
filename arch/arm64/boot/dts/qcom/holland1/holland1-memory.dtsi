@@ -1,5 +1,4 @@
-/* Copyright (c) 2020, The Linux Foundation. All rights reserved.
-*  Copyright (c) 2020, Jebaitedneko.
+/* Copyright (c) 2021, The Linux Foundation. All rights reserved.
 *
 * This program is free software; you can redistribute it and/or modify
 * it under the terms of the GNU General Public License version 2 and
@@ -11,11 +10,19 @@
 * GNU General Public License for more details.
 */
 
-#include "holland1-power.dtsi"
-#include "holland1-audio.dtsi"
-#include "holland1-camera.dtsi"
-#include "holland1-general.dtsi"
-#include "holland1-mdss.dtsi"
-#include "holland1-misc.dtsi"
-#include "holland1-pinctrl.dtsi"
-#include "holland1-memory.dtsi"
+/{
+    reserved-memory {
+
+	    other_ext_mem: other_ext_region@0 {
+
+	    	reg = <0x0 0x84A00000 0x0 0x1E00000>;
+	    };
+
+    	ramoops@8f000000 {
+    		compatible = "ramoops";
+    		reg = <0 0x8f000000 0 0x100000>;
+    		record-size = <0x4000>;
+    		console-size = <0x4000>;
+    	};
+    };
+};

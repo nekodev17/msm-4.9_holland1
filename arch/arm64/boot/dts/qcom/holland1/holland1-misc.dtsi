@@ -50,21 +50,6 @@
 		};
 	};
 
-	reserved-memory {
-
-		other_ext_mem: other_ext_region@0 {
-
-			reg = <0x0 0x84A00000 0x0 0x1E00000>;
-		};
-
-		ramoops@8f000000 {
-			compatible = "ramoops";
-			reg = <0 0x8f000000 0 0x100000>;
-			record-size = <0x4000>;
-			console-size = <0x4000>;
-		};
-	};
-
 	board_gpios: board_gpios@0 {
 
 		compatible = "pcb-gpio";
